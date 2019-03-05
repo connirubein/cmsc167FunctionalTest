@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OpenCameraActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/btnBg"
+        android:paddingEnd="0dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="0dp"
+        android:paddingStart="12dp"
+        android:paddingTop="16dp"
+        android:fontFamily="@font/bebasneue_bold"
+        android:text="@string/species_information"
+        android:textColor="@color/color2"
+        android:textSize="36sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="443dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/ll_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="0dp"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="154dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_bold"
+                android:paddingEnd="0dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="0dp"
+                android:paddingStart="15dp"
+                android:paddingTop="8dp"
+                android:text="@string/species_name"
+                android:textColor="@color/color3"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/et_specName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:textColor="#6b6262" />
+
+            <TextView
+                android:id="@+id/tv_label2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_bold"
+                android:paddingEnd="0dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="0dp"
+                android:paddingStart="15dp"
+                android:paddingTop="8dp"
+                android:text="@string/common_name"
+                android:textColor="@color/color3"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/et_comName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:textColor="#6b6262" />
+
+            <TextView
+                android:id="@+id/tv_label3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_bold"
+                android:paddingEnd="0dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="0dp"
+                android:paddingStart="15dp"
+                android:paddingTop="8dp"
+                android:text="@string/remarks"
+                android:textColor="@color/color3"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/et_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:textColor="#6b6262" />
+
+            <TextView
+                android:id="@+id/tv_label4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_bold"
+                android:paddingEnd="0dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="0dp"
+                android:paddingStart="15dp"
+                android:paddingTop="8dp"
+                android:text="@string/location"
+                android:textColor="@color/color3"
+                android:textSize="22sp" />
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_geoPoint"-->
+                <!--android:layout_width="130dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:background="@drawable/rounded_btn"-->
+                <!--android:fontFamily="@font/bebasneue_regular"-->
+                <!--android:text="@string/get_geopoint"-->
+                <!--android:textColor="@color/txtColor"-->
+                <!--android:textSize="22sp" />-->
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/rb_gps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onRadioBtnClicked"
+                    android:text="GPS Location" />
+
+                <RadioButton
+                    android:id="@+id/rb_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onRadioBtnClicked"
+                    android:text="Pin from map" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_alti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/tv_lati"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/tv_lngi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_btn"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:paddingTop="8dp"
+                    android:text="@string/save"
+                    android:textColor="@color/txtColor"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/btn_save"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_btn"
+                    android:fontFamily="@font/bebasneue_regular"
+                    android:paddingTop="8dp"
+                    android:text="@string/submit"
+                    android:textColor="@color/txtColor"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

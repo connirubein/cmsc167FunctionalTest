@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityProfilePending">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/hikerIcon"
+        app:srcCompat="@android:drawable/ic_menu_myplaces"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnPending"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/pendingIcon"
+            android:tint="@android:color/holo_green_light"
+            app:srcCompat="@android:drawable/stat_notify_error" />
+
+        <ImageButton
+            android:id="@+id/btnSubmissions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/submitsIcon"
+            android:tint="@android:color/transparent"
+            app:srcCompat="@android:drawable/stat_sys_upload_done" />
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="104dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/hiker_s_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/noRecordLabel"
+        android:layout_width="174dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:text="@string/no_saved_records"
+        android:gravity="center"/>
+
+    <ListView
+        android:id="@+id/pendingListView"
+        android:layout_width="match_parent"
+        android:layout_height="421dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+
+        />
+
+    <Button
+        android:id="@+id/btn_map"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/rounded_btn"
+        android:fontFamily="@font/bebasneue_regular"
+        android:text="@string/map"
+        android:textColor="@color/txtColor"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btn_map"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/rounded_btn"
+        android:fontFamily="@font/bebasneue_regular"
+        android:text="@string/profile"
+        android:textColor="@color/txtColor"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btn_record"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_map"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_btn"
+        android:fontFamily="@font/bebasneue_regular"
+        android:text="@string/record"
+        android:textColor="@color/txtColor"
+        android:textSize="22dp" />
+
+</RelativeLayout>
